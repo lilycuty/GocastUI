@@ -1,0 +1,58 @@
+@use '../../abstracts/' as abs;
+.history {
+	&-section {
+		padding: 40px 60px 0 0;
+	}
+	&-container {
+		display: flex;
+		flex-direction: column;
+		gap: 18px;
+	}
+	&-heading {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&-image {
+		flex: 0 0 109px;
+		height: 67px;
+		// width: 159px;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 4px;
+		}
+	}
+	&-content {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		gap: 11px;
+	}
+	&-status {
+		font-size: 13px;
+		font-weight: 400;
+		color: abs.$gray2;
+		display: inline-block;
+		margin-bottom: 3px;
+	}
+	&-title {
+		font-size: 15px;
+		display: inline-block;
+		margin-bottom: 3px;
+	}
+	&-following {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+	}
+	&-listen,
+	&-like {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		font-size: 13px;
+		font-weight: 400;
+		color: abs.$gray2;
+	}
+}

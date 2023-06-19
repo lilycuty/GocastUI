@@ -1,0 +1,10 @@
+.follow-section 
+  .widget-header 
+    h3.heading Suggested Follows
+    a(href="#").link
+      span View all 
+      include ../../icons/_icon-arrow-r
+  .follow-container 
+      each val in [1,2,3,4]
+        +followItem()
+      

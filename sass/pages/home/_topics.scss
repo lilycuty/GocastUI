@@ -1,0 +1,41 @@
+@use '../../abstracts/' as abs;
+.topic {
+	&-section {
+		padding: 42px 60px 0 0;
+	}
+	&-content {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 12px 22px;
+	}
+	&-box {
+		width: 155px;
+		height: 86px;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		padding: 10px;
+		justify-content: flex-end;
+	}
+	&-img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		position: absolute;
+		z-index: -1;
+		inset: 0;
+		background: #1b1d21;
+		opacity: 0.74;
+		border-radius: 10px;
+	}
+	&-title {
+		color: abs.$color-white;
+		display: block;
+	}
+	&-member {
+		font-size: 13px;
+		font-weight: 400;
+		color: abs.$color-white;
+		display: block;
+	}
+}
