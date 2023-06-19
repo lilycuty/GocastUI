@@ -1,0 +1,51 @@
+@use '../abstracts' as abs;
+.sidebar {
+	padding: 48px 30px;
+	border-right: 1px solid abs.$color-natural2;
+}
+.logo {
+	display: inline-block;
+	padding-left: 20px;
+	margin-bottom: 44px;
+}
+.menu {
+	&-list:not(:last-child) {
+		border-bottom: 1px solid abs.$grayE9;
+		padding-bottom: 26px;
+	}
+	&-item {
+		margin-bottom: 6px;
+	}
+	&-icon {
+		flex: 0 0 24px;
+	}
+	&-link {
+		@include abs.flexBoxs(center, false, 10px, row);
+		color: abs.$gray1;
+		line-height: 1.43;
+		padding: 8px 20px;
+		border-radius: 12px;
+		[fill^='#E5'] {
+			opacity: 0.7;
+		}
+		&:hover {
+			background-image: abs.$gradient;
+			color: abs.$color-white;
+			[fill^='#A5'] {
+				fill: #a79ee5;
+				mix-blend-mode: normal;
+			}
+			[fill^='#E5'] {
+				fill: abs.$color-natural1;
+				opacity: 1;
+			}
+		}
+	}
+	&-title {
+		display: inline-block;
+		color: abs.$gray1;
+		font-weight: 400;
+		font-size: 13px;
+		margin: 26px 20px 20px;
+	}
+}

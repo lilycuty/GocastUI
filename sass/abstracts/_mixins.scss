@@ -1,0 +1,20 @@
+// @mixin flexBox($options) {
+// 	display: flex;
+// 	flex-direction: map-get($options, 'fd');
+// 	align-items: map-get($options, 'al');
+// 	justify-content: map-get($options, 'jc');
+// 	gap: map-get($options, 'g');
+// }
+@mixin flexBoxs($align: center, $jc, $gap: 0, $fd) {
+	display: flex;
+	align-items: $align;
+	@if $jc {
+		justify-content: $jc;
+	}
+	@if $gap {
+		gap: $gap;
+	}
+	@if $fd {
+		flex-direction: $fd;
+	}
+}
