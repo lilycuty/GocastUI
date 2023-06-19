@@ -2,6 +2,9 @@
 .feed {
 	&-section {
 		padding: 48px 60px 100px 56px;
+		margin-bottom: 72px;
+		container-type: inline-size;
+		container-name: containerFeed;
 	}
 	&-header {
 		display: flex;
@@ -140,5 +143,27 @@
 		padding: 8px 14px;
 		gap: 8px;
 		border-radius: 8px;
+	}
+	@container containerFeed (max-width: 667.98px) {
+		&-text {
+			display: none;
+		}
+		&-rated {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 0px;
+		}
+		&-rating {
+			gap: 4px;
+		}
+		&-author {
+			align-items: flex-start;
+		}
+		&-podcast {
+			flex-direction: column;
+		}
+		&-image {
+			width: 100%;
+		}
 	}
 }

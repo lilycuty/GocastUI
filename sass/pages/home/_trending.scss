@@ -13,6 +13,8 @@
 		position: relative;
 		border-radius: 10px;
 		padding: 20px;
+		container-type: inline-size;
+		container-name: containerTrending;
 	}
 	&-info {
 		width: 329px;
@@ -52,5 +54,10 @@
 		position: absolute;
 		bottom: 0;
 		right: 15px;
+	}
+	@container containerTrending (max-width: 623.98px) {
+		&-image {
+			display: none;
+		}
 	}
 }

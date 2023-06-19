@@ -4,8 +4,43 @@
 	margin: 0 auto;
 	display: grid;
 	grid-template-columns: 256px minmax(0, 1fr);
+	position: relative;
+}
+
+.main-container {
+	container-type: inline-size;
+	container-name: containerMain;
 }
 .main-content {
 	display: grid;
 	grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+	@container containerMain (max-width: 1057px) {
+		grid-template-columns: 1fr;
+		&-right {
+			display: none;
+		}
+	}
+	@container containerMain (max-width: 708px) {
+		.popular-section,
+		.trending-section,
+		.feed-section {
+			padding: 15px 23px 0 23px;
+		}
+		.feed-section {
+			padding-bottom: 72px;
+		}
+	}
+}
+@media screen and (max-width: 725px) {
+	.topbar {
+		padding: 24px 23px !important;
+	}
+}
+@media screen and (max-width: 1055px) {
+	.button-union {
+		display: block !important;
+	}
+}
+.active {
+	transform: translateX(0);
 }

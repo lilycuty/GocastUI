@@ -1,0 +1,33 @@
+@use '../../abstracts/' as *;
+@media screen and (max-width: 1314.98px) {
+	.wrapper {
+		grid-template-columns: 1fr !important;
+	}
+	.sidebar {
+		position: fixed;
+		width: 300px;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		z-index: 99;
+		background-color: $color-white;
+		transform: translateX(-100%);
+		transition: all 0.25s linear;
+	}
+
+	.navigation {
+		display: flex !important;
+	}
+	.topbar {
+		&-logo {
+			display: inline-block !important;
+		}
+		&-search,
+		&-icon {
+			display: none !important;
+		}
+	}
+	.button-upload {
+		display: none !important;
+	}
+}

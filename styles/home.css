@@ -1,5 +1,7 @@
 .popular-section {
   padding: 30px 60px 0 56px;
+  container-type: inline-size;
+  container-name: containerPopular;
 }
 .popular-title {
   font-weight: 600;
@@ -11,7 +13,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 31px;
 }
 .popular-item {
   display: flex;
@@ -38,6 +39,23 @@
   font-weight: 400;
   color: #5f6164;
 }
+@container containerPopular (max-width: 579.98px) {
+  .popular-list {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+    gap: 20px;
+    padding: 10px;
+  }
+  .popular-list::-webkit-scrollbar {
+    display: none;
+    width: 0;
+  }
+  .popular-list > * {
+    scroll-snap-align: start;
+  }
+}
 
 .trending-section {
   padding: 48px 60px 0 56px;
@@ -52,6 +70,8 @@
   position: relative;
   border-radius: 10px;
   padding: 20px;
+  container-type: inline-size;
+  container-name: containerTrending;
 }
 .trending-info {
   width: 329px;
@@ -92,9 +112,17 @@
   bottom: 0;
   right: 15px;
 }
+@container containerTrending (max-width: 623.98px) {
+  .trending-image {
+    display: none;
+  }
+}
 
 .feed-section {
   padding: 48px 60px 100px 56px;
+  margin-bottom: 72px;
+  container-type: inline-size;
+  container-name: containerFeed;
 }
 .feed-header {
   display: flex;
@@ -232,6 +260,28 @@
   padding: 8px 14px;
   gap: 8px;
   border-radius: 8px;
+}
+@container containerFeed (max-width: 667.98px) {
+  .feed-text {
+    display: none;
+  }
+  .feed-rated {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0px;
+  }
+  .feed-rating {
+    gap: 4px;
+  }
+  .feed-author {
+    align-items: flex-start;
+  }
+  .feed-podcast {
+    flex-direction: column;
+  }
+  .feed-image {
+    width: 100%;
+  }
 }
 
 .podcast-section {
@@ -394,6 +444,35 @@
   font-weight: 400;
   color: #fff;
   display: block;
+}
+
+@media screen and (max-width: 1314.98px) {
+  .wrapper {
+    grid-template-columns: 1fr !important;
+  }
+  .sidebar {
+    position: fixed;
+    width: 300px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 99;
+    background-color: #fff;
+    transform: translateX(-100%);
+    transition: all 0.25s linear;
+  }
+  .navigation {
+    display: flex !important;
+  }
+  .topbar-logo {
+    display: inline-block !important;
+  }
+  .topbar-search, .topbar-icon {
+    display: none !important;
+  }
+  .button-upload {
+    display: none !important;
+  }
 }
 
 /*# sourceMappingURL=home.css.map */
