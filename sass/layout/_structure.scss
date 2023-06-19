@@ -17,7 +17,7 @@
 	@container containerMain (max-width: 1057px) {
 		grid-template-columns: 1fr;
 		&-right {
-			display: none;
+			display: block;
 		}
 	}
 	@container containerMain (max-width: 708px) {
@@ -26,8 +26,14 @@
 		.feed-section {
 			padding: 15px 23px 0 23px;
 		}
-		.feed-section {
-			padding-bottom: 72px;
+		.podcast-section,
+		.follow-section,
+		.history-section,
+		.topic-section {
+			padding: 0 23px 30px 23px;
+		}
+		.topic-section {
+			padding-bottom: 150px;
 		}
 	}
 }
@@ -39,6 +45,42 @@
 @media screen and (max-width: 1055px) {
 	.button-union {
 		display: block !important;
+	}
+	.main-container-right {
+		display: block;
+	}
+	.podcast {
+		&-section {
+			padding: 30px 60px 0 60px;
+		}
+		&-image {
+			width: auto;
+			height: auto;
+		}
+	}
+	.follow {
+		&-section {
+			padding: 40px 60px 0 60px;
+		}
+	}
+	.history {
+		&-section {
+			padding: 40px 60px 0 60px;
+		}
+		&-image {
+			flex: 1 1 109px;
+		}
+	}
+	.topic {
+		&-section {
+			padding: 42px 60px 150px 60px;
+		}
+		&-box {
+			width: auto;
+		}
+	}
+	.button-close {
+		display: block;
 	}
 }
 .active {

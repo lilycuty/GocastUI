@@ -9,3 +9,8 @@
 .button-primary {
 	background-color: $primary-color;
 }
+.button-close {
+	position: absolute;
+	top: 0;
+	display: none;
+}

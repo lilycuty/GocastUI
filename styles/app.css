@@ -121,10 +121,6 @@ body {
   display: none;
 }
 
-.hidden {
-  display: none;
-}
-
 .button {
   display: flex;
   align-items: center;
@@ -135,6 +131,12 @@ body {
 
 .button-primary {
   background-color: #6c5dd3;
+}
+
+.button-close {
+  position: absolute;
+  top: 0;
+  display: none;
 }
 
 .toggle {
@@ -232,7 +234,7 @@ body {
     grid-template-columns: 1fr;
   }
   .main-content-right {
-    display: none;
+    display: block;
   }
 }
 @container containerMain (max-width: 708px) {
@@ -241,8 +243,14 @@ body {
   .main-content .feed-section {
     padding: 15px 23px 0 23px;
   }
-  .main-content .feed-section {
-    padding-bottom: 72px;
+  .main-content .podcast-section,
+  .main-content .follow-section,
+  .main-content .history-section,
+  .main-content .topic-section {
+    padding: 0 23px 30px 23px;
+  }
+  .main-content .topic-section {
+    padding-bottom: 150px;
   }
 }
 
@@ -254,6 +262,34 @@ body {
 @media screen and (max-width: 1055px) {
   .button-union {
     display: block !important;
+  }
+  .main-container-right {
+    display: block;
+  }
+  .podcast-section {
+    padding: 30px 60px 0 60px;
+  }
+  .podcast-image {
+    width: auto;
+    height: auto;
+  }
+  .follow-section {
+    padding: 40px 60px 0 60px;
+  }
+  .history-section {
+    padding: 40px 60px 0 60px;
+  }
+  .history-image {
+    flex: 1 1 109px;
+  }
+  .topic-section {
+    padding: 42px 60px 150px 60px;
+  }
+  .topic-box {
+    width: auto;
+  }
+  .button-close {
+    display: block;
   }
 }
 .active {

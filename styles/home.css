@@ -286,6 +286,7 @@
 
 .podcast-section {
   padding: 30px 60px 0 0;
+  position: relative;
 }
 .podcast-list {
   display: grid;
@@ -385,7 +386,7 @@
   font-size: 13px;
   font-weight: 400;
   color: #a6a7b2;
-  display: inline-block;
+  display: block;
   margin-bottom: 3px;
 }
 .history-title {
