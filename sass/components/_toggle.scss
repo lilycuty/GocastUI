@@ -1,0 +1,18 @@
+@use '../abstracts/' as *;
+.toggle {
+	width: 30px;
+	height: 17px;
+	background-image: $gradient;
+	border-radius: 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.5px 2px;
+	cursor: pointer;
+	&-spinner {
+		width: 14px;
+		height: 14px;
+		border-radius: 100rem;
+		background-color: $color-natural1;
+	}
+}

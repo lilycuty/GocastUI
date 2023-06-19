@@ -1,0 +1,11 @@
+@use '../abstracts' as *;
+.button {
+	display: flex;
+	align-items: center;
+	font-size: 15px;
+	font-weight: 600;
+	color: $color-white;
+}
+.button-primary {
+	background-color: $primary-color;
+}

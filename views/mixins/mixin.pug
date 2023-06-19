@@ -25,3 +25,44 @@ mixin menuItem(title, icons, href = '#')
             when 'icon-star'
               include ../icons/_icon-star
       span.menu-text= title
+    
+mixin toggle()
+  .toggle 
+    .toggle-spinner 
+
+mixin feedItem(name,day,status,podcast,title,desc)
+  .feed-author 
+    .feed-avatar
+      img(srcSet="./images/user-1.png 2x", alt="Author")
+      span.feed-tick 
+        include ../icons/_icon-verify
+    .feed-info
+      .feed-rated
+        h3.feed-name= name
+        span.feed-rating= status
+          include ../icons/_icon-magicstar
+      p.feed-date= day 
+    span.feed-icon
+      include ../icons/_icon-more
+  .feed-podcast 
+    .feed-image
+      img(src="https://plus.unsplash.com/premium_photo-1666792562882-8bd04befec7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1075&q=80", alt="Podcast")
+    .feed-podcast-content 
+      span.feed-podcast-heading= podcast
+      h3.feed-podcast-title= title
+      .feed-podcast-time 
+        .feed-podcast-day
+          include ../icons/_icon-time
+          span 11 dayes ago
+        .feed-podcast-timer 
+          include ../icons/_icon-timer
+          span 45mins 10 Sec
+      p.feed-podcast-desc= desc
+  .feed-bottom 
+    .feed-share 
+      include ../icons/_icon-heart
+      include ../icons/_icon-feedstar
+      include ../icons/_icon-musicplay
+    button.button.button-primary.feed-button
+      include ../icons/_icon-play
+      span Play Episode

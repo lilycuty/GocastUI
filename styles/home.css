@@ -1,3 +1,237 @@
+.popular-section {
+  padding: 30px 60px 0 56px;
+}
+.popular-title {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.popular-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 31px;
+}
+.popular-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+.popular-avatar {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: flex-end;
+}
+.popular-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100rem;
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #ffabc6;
+  background-color: #ffbaa5;
+}
+.popular-name {
+  font-weight: 400;
+  color: #5f6164;
+}
 
+.trending-section {
+  padding: 48px 60px 0 56px;
+}
+.trending-title {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 11px;
+}
+.trending-banner {
+  background-color: #f8f8f8;
+  position: relative;
+  border-radius: 10px;
+  padding: 20px;
+}
+.trending-info {
+  width: 329px;
+}
+.trending-heading {
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 11px;
+}
+.trending-heading span {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(92.29deg, #415ef4 0.33%, #7141ef 28.14%);
+}
+.trending-podcast {
+  display: block;
+  font-weight: 400;
+  color: #676a6f;
+  margin-bottom: 4px;
+}
+.trending-author {
+  font-weight: 400;
+  color: #232333;
+  display: block;
+  margin-bottom: 20px;
+}
+.trending-author span {
+  color: #676a6f;
+}
+.trending-button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  gap: 8px;
+}
+.trending-image {
+  position: absolute;
+  bottom: 0;
+  right: 15px;
+}
+
+.feed-section {
+  padding: 48px 60px 100px 56px;
+}
+.feed-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.feed-list {
+  display: flex;
+  align-items: center;
+}
+.feed-item {
+  border-bottom: 1px solid currentColor;
+  color: #5f6164;
+  cursor: pointer;
+}
+.feed-item span {
+  font-weight: 600;
+  display: inline-block;
+  padding: 10px;
+}
+.feed-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.feed-text {
+  color: #5f6164;
+}
+.feed-content {
+  border: 1px solid #f0f3f6;
+  border-radius: 10px;
+}
+.feed-author {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  border-bottom: 1px solid #f0f3f6;
+  padding: 20px;
+}
+.feed-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 48px;
+  position: relative;
+}
+.feed-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 48px;
+  background-color: #ffabc6;
+}
+.feed-tick {
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+}
+.feed-rated {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 4px;
+}
+.feed-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #a6a7b2;
+}
+.feed-date {
+  color: #a6a7b2;
+  font-weight: 400;
+}
+.feed-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+.feed-podcast {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  border-bottom: 1px solid #f0f3f6;
+}
+.feed-podcast-heading {
+  display: inline-block;
+  font-weight: 400;
+  color: #a6a7b2;
+  margin-bottom: 6px;
+}
+.feed-podcast-time {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+.feed-podcast-day, .feed-podcast-timer {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 400;
+  color: #a6a7b2;
+}
+.feed-podcast-desc {
+  font-weight: 400;
+}
+.feed-image {
+  flex: 0 0 152px;
+  height: 158px;
+}
+.feed-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 1;
+  border-radius: 10px;
+}
+.feed-bottom {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.feed-share {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+  cursor: pointer;
+}
+.feed-button {
+  padding: 8px 14px;
+  gap: 8px;
+  border-radius: 8px;
+}
 
 /*# sourceMappingURL=home.css.map */

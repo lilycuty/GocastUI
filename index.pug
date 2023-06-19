@@ -5,3 +5,11 @@ block title
 
 block stylesheet 
   link(rel="stylesheet", href="./styles/home.css")
+
+block main
+  .main-content-left
+    include ./views/modules/home/_popular
+    include ./views/modules/home/_trending
+    include ./views/modules/home/_feed
+  .main-content-right
+    include ./views/modules/home/_top-podcast

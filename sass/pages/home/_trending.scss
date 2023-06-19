@@ -1,0 +1,56 @@
+@use '../../abstracts/' as abs;
+.trending {
+	&-section {
+		padding: 48px 60px 0 56px;
+	}
+	&-title {
+		font-weight: 600;
+		font-size: 16px;
+		margin-bottom: 11px;
+	}
+	&-banner {
+		background-color: #f8f8f8;
+		position: relative;
+		border-radius: 10px;
+		padding: 20px;
+	}
+	&-info {
+		width: 329px;
+	}
+	&-heading {
+		font-weight: 600;
+		font-size: 22px;
+		span {
+			color: transparent;
+			background-clip: text;
+			-webkit-background-clip: text;
+			background-image: abs.$gradient;
+		}
+		margin-bottom: 11px;
+	}
+	&-podcast {
+		display: block;
+		font-weight: 400;
+		color: abs.$color-natural;
+		margin-bottom: 4px;
+	}
+	&-author {
+		font-weight: 400;
+		color: #232333;
+		span {
+			color: abs.$color-natural;
+		}
+		display: block;
+		margin-bottom: 20px;
+	}
+	&-button {
+		padding: 10px 16px;
+		border-radius: 8px;
+		gap: 8px;
+	}
+	&-image {
+		position: absolute;
+		bottom: 0;
+		right: 15px;
+	}
+}

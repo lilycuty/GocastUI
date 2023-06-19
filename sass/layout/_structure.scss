@@ -5,3 +5,7 @@
 	display: grid;
 	grid-template-columns: 256px minmax(0, 1fr);
 }
+.main-content {
+	display: grid;
+	grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+}
