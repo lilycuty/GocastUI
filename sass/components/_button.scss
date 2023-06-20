@@ -1,13 +1,17 @@
 @use '../abstracts' as *;
 .button {
-	display: flex;
-	align-items: center;
+	@include flexBoxs(center, null, 0, null);
 	font-size: 15px;
 	font-weight: 600;
 	color: $color-white;
 }
 .button-primary {
 	background-color: $primary-color;
+}
+.button-upload {
+	padding: 13px 16px;
+	border-radius: 8px;
+	gap: 6px;
 }
 .button-close {
 	position: absolute;

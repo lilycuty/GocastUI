@@ -1,17 +1,13 @@
 @use '../abstracts/' as *;
 .toggle {
-	width: 30px;
-	height: 17px;
+	@include size(30px, 17px);
 	background-image: $gradient;
 	border-radius: 30px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	@include flexBoxs(center, space-between, 0, null);
 	padding: 1.5px 2px;
 	cursor: pointer;
 	&-spinner {
-		width: 14px;
-		height: 14px;
+		@include size(14px);
 		border-radius: 100rem;
 		background-color: $color-natural1;
 	}

@@ -11,27 +11,18 @@
 		margin-bottom: 20px;
 	}
 	&-list {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
+		@include abs.flexBoxs(center, space-between, 0, row);
 	}
 	&-item {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		gap: 7px;
+		@include abs.flexBoxs(center, center, 7px, column);
 	}
 	&-avatar {
 		width: 64px;
 		height: 64px;
-		display: flex;
-		align-items: flex-end;
+		@include abs.size(64px);
+		@include abs.flexBoxs(flex-end, null, 0, null);
 		img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
+			@include abs.imgCover();
 			border-radius: 100rem;
 			box-shadow: 0 0 0 2px white, 0 0 0 3px abs.$boder-color;
 			background-color: #ffbaa5;

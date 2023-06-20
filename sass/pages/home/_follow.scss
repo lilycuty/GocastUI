@@ -4,32 +4,22 @@
 		padding: 40px 60px 0 0;
 	}
 	&-container {
-		display: flex;
-		flex-direction: column;
-		gap: 21px;
+		@include abs.flexBoxs(null, null, 21px, column);
 	}
 	&-content {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
+		@include abs.flexBoxs(center, space-between, 0, null);
 	}
 	&-author {
-		display: flex;
-		align-items: center;
-		gap: 10px;
+		@include abs.flexBoxs(center, null, 10px, null);
 	}
 	&-info {
-		display: flex;
-		align-items: flex-start;
-		flex-direction: column;
+		@include abs.flexBoxs(flex-start, null, 0, column);
 	}
 	&-avatar {
 		flex: 0 0 46px;
 		height: 46px;
 		img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
+			@include abs.imgCover();
 			border-radius: 6px;
 			box-shadow: 0 0 0 2px white, 0 0 0 3px abs.$boder-color;
 		}
