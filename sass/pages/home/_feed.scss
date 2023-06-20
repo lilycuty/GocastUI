@@ -27,17 +27,20 @@
 		@include abs.flexBoxs(center, null, 10px, null);
 	}
 	&-text {
-		color: abs.$gray5F;
+		color: var(--natural-4, abs.$gray5F);
+	}
+	&-container {
+		@include abs.flexBoxs(null, null, 30px, column);
 	}
 	&-content {
-		border: 1px solid abs.$color-natural2;
+		border: 1px solid var(--text-color, abs.$color-natural2);
 		border-radius: 10px;
 	}
 	&-author {
 		@include abs.flexBoxs(center, null, 0, null);
 		gap: 16px;
 		position: relative;
-		border-bottom: 1px solid abs.$color-natural2;
+		border-bottom: 1px solid var(--text-color, abs.$color-natural2);
 		padding: 20px;
 	}
 	&-avatar {
@@ -75,7 +78,7 @@
 	&-podcast {
 		padding: 20px;
 		@include abs.flexBoxs(center, null, 20px, null);
-		border-bottom: 1px solid abs.$color-natural2;
+		border-bottom: 1px solid var(--text-color, abs.$color-natural2);
 		&-heading {
 			display: inline-block;
 			font-weight: 400;

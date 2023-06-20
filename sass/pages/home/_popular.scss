@@ -30,7 +30,7 @@
 	}
 	&-name {
 		font-weight: 400;
-		color: abs.$gray5F;
+		color: var(--natural-4, abs.$gray5F);
 	}
 	@container containerPopular (max-width: 579.98px) {
 		&-avatar {

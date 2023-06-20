@@ -9,7 +9,7 @@
 		margin-bottom: 11px;
 	}
 	&-banner {
-		background-color: #f8f8f8;
+		background-color: var(--trending-banner, #f8f8f8);
 		position: relative;
 		border-radius: 10px;
 		padding: 20px;
@@ -33,14 +33,14 @@
 	&-podcast {
 		display: block;
 		font-weight: 400;
-		color: abs.$color-natural;
+		color: var(--gray-2, abs.$color-natural);
 		margin-bottom: 4px;
 	}
 	&-author {
 		font-weight: 400;
-		color: #232333;
+		color: var(--text-white, #232333);
 		span {
-			color: abs.$color-natural;
+			color: var(--gray-2, abs.$color-natural);
 		}
 		display: block;
 		margin-bottom: 20px;

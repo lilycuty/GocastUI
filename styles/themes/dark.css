@@ -1,0 +1,18 @@
+body {
+  background-color: var(--bg-color);
+  color: var(--text-white);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #242731;
+    --text-color: #373a43;
+    --text-white: #fff;
+    --natural-4: #e4e4e4;
+    --trending-banner: #050f16;
+    --gray-2: #a6a7b2;
+    --icon-path: #676a6f;
+  }
+}
+
+/*# sourceMappingURL=dark.css.map */

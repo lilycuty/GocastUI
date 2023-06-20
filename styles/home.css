@@ -41,7 +41,7 @@
 }
 .popular-name {
   font-weight: 400;
-  color: #5f6164;
+  color: var(--natural-4, #5f6164);
 }
 @container containerPopular (max-width: 579.98px) {
   .popular-avatar {
@@ -73,7 +73,7 @@
   margin-bottom: 11px;
 }
 .trending-banner {
-  background-color: #f8f8f8;
+  background-color: var(--trending-banner, #f8f8f8);
   position: relative;
   border-radius: 10px;
   padding: 20px;
@@ -97,17 +97,17 @@
 .trending-podcast {
   display: block;
   font-weight: 400;
-  color: #676a6f;
+  color: var(--gray-2, #676a6f);
   margin-bottom: 4px;
 }
 .trending-author {
   font-weight: 400;
-  color: #232333;
+  color: var(--text-white, #232333);
   display: block;
   margin-bottom: 20px;
 }
 .trending-author span {
-  color: #676a6f;
+  color: var(--gray-2, #676a6f);
 }
 .trending-button {
   padding: 10px 16px;
@@ -159,10 +159,15 @@
   gap: 10px;
 }
 .feed-text {
-  color: #5f6164;
+  color: var(--natural-4, #5f6164);
+}
+.feed-container {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
 }
 .feed-content {
-  border: 1px solid #f0f3f6;
+  border: 1px solid var(--text-color, #f0f3f6);
   border-radius: 10px;
 }
 .feed-author {
@@ -171,7 +176,7 @@
   gap: 0;
   gap: 16px;
   position: relative;
-  border-bottom: 1px solid #f0f3f6;
+  border-bottom: 1px solid var(--text-color, #f0f3f6);
   padding: 20px;
 }
 .feed-avatar {
@@ -219,7 +224,7 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  border-bottom: 1px solid #f0f3f6;
+  border-bottom: 1px solid var(--text-color, #f0f3f6);
 }
 .feed-podcast-heading {
   display: inline-block;
@@ -351,7 +356,7 @@
   height: 100%;
   object-fit: cover;
   border-radius: 6px;
-  box-shadow: 0 0 0 2px white, 0 0 0 3px #ffabc6;
+  box-shadow: 0 0 0 2px var(--bg-color, white), 0 0 0 3px #ffabc6;
 }
 .follow-name {
   font-size: 15px;

@@ -21,7 +21,7 @@
 		img {
 			@include abs.imgCover();
 			border-radius: 6px;
-			box-shadow: 0 0 0 2px white, 0 0 0 3px abs.$boder-color;
+			box-shadow: 0 0 0 2px var(--bg-color, white), 0 0 0 3px abs.$boder-color;
 		}
 	}
 	&-name {

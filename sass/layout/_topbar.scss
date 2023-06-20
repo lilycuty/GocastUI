@@ -5,7 +5,7 @@
 	&-search {
 		@include abs.flexBoxs(center, null, 0, null);
 		width: 360px;
-		background-color: abs.$color-natural2;
+		background-color: var(--text-color, abs.$color-natural2);
 		padding: 15px 23px;
 		border-radius: 12px;
 	}

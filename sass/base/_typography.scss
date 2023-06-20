@@ -2,7 +2,7 @@
 body {
 	min-height: 100vh;
 	font-family: $font-primary;
-	color: $color-black1;
+	color: var(--bg-color, $color-black1);
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 1.5;

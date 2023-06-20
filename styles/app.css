@@ -44,7 +44,7 @@ a {
 body {
   min-height: 100vh;
   font-family: "IBM Plex Sans", sans-serif;
-  color: #1b1d21;
+  color: var(--bg-color, #1b1d21);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.5;
@@ -180,6 +180,7 @@ body {
   display: inline-block;
   padding-left: 20px;
   margin-bottom: 44px;
+  color: var(--text-white, #11142d);
 }
 
 .menu-list:not(:last-child) {
@@ -204,6 +205,7 @@ body {
 }
 .menu-link [fill^="#E5"] {
   opacity: 0.7;
+  fill: var(--icon-path, #e5eaf1);
 }
 .menu-link:hover {
   background-image: linear-gradient(92.29deg, #415ef4 0.33%, #7141ef 28.14%);
@@ -352,7 +354,7 @@ body {
   align-items: center;
   gap: 0;
   width: 360px;
-  background-color: #f0f3f6;
+  background-color: var(--text-color, #f0f3f6);
   padding: 15px 23px;
   border-radius: 12px;
 }
@@ -387,6 +389,23 @@ body {
 }
 .input-search::placeholder {
   color: #a6a7b2;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-white);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #242731;
+    --text-color: #373a43;
+    --text-white: #fff;
+    --natural-4: #e4e4e4;
+    --trending-banner: #050f16;
+    --gray-2: #a6a7b2;
+    --icon-path: #676a6f;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */
