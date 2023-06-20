@@ -17,4 +17,9 @@ VD: Page có 2 trang chính là Home và Trending -> Trong trang chính có các
 `themes`: dark_mod,....
 `vendors`: chứa các thư viện bên ngoài
 
---> Trong file main `use` tất cả các file dùng chung cho cả trang web,
+--> Trong file main `use` tất cả các file dùng chung cho cả trang web
+user3:#B6AEE9
+4:#FFB5CD
+5:#FFE2AB
+#FFC7D9
+#B6AEE9

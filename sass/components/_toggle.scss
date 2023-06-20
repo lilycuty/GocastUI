@@ -1,14 +1,27 @@
 @use '../abstracts/' as *;
 .toggle {
-	@include size(30px, 17px);
-	background-image: $gradient;
-	border-radius: 30px;
-	@include flexBoxs(center, space-between, 0, null);
-	padding: 1.5px 2px;
-	cursor: pointer;
-	&-spinner {
-		@include size(14px);
+	&-main {
+		@include size(30px, 17px);
 		border-radius: 100rem;
-		background-color: $color-natural1;
+		background-color: #676a6f;
+		padding: 1.5px 2px;
+		cursor: pointer;
+		transition: all 0.2s linear;
+	}
+	&-spinner {
+		border-radius: 100rem;
+		background-color: white;
+		width: 14px;
+		aspect-ratio: 1;
+		transition: all 0.2s linear;
+	}
+	input {
+		display: none;
+		&:checked + .toggle-main {
+			background-image: $gradient;
+		}
+		&:checked + .toggle-main .toggle-spinner {
+			transform: translateX(12px);
+		}
 	}
 }

@@ -1,6 +1,6 @@
 @use '../abstracts' as *;
 .button {
-	@include flexBoxs(center, null, 0, null);
+	@include flexBoxs(center, null, null, null);
 	font-size: 15px;
 	font-weight: 600;
 	color: $color-white;

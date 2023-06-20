@@ -20,7 +20,7 @@
 		}
 	}
 	&-content {
-		@include abs.flexBoxs(flex-start, space-between, 11px, null);
+		@include abs.flexBoxs(flex-start, null, 11px, null);
 	}
 	&-status {
 		font-size: 13px;

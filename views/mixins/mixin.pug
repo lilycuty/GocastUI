@@ -27,13 +27,15 @@ mixin menuItem(title, icons, href = '#')
       span.menu-text= title
     
 mixin toggle()
-  .toggle 
-    .toggle-spinner 
+  label.toggle
+    input(type="checkbox",name='')
+    .toggle-main 
+      .toggle-spinner 
 
-mixin feedItem(name,day,status,podcast,title,desc)
+mixin feedItem(name,day,status,podcast,title,desc,imgAvatar,img)
   .feed-author 
     .feed-avatar
-      img(srcSet="./images/user-1.png 2x", alt="Author")
+      img(srcSet=`${imgAvatar} 2x`, alt="Author")
       span.feed-tick 
         include ../icons/_icon-verify
     .feed-info
@@ -46,7 +48,7 @@ mixin feedItem(name,day,status,podcast,title,desc)
       include ../icons/_icon-more
   .feed-podcast 
     .feed-image
-      img(src="https://plus.unsplash.com/premium_photo-1666792562882-8bd04befec7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1075&q=80", alt="Podcast")
+      img(srcSet=`${img} 2x`, alt="Podcast")
     .feed-podcast-content 
       span.feed-podcast-heading= podcast
       h3.feed-podcast-title= title
@@ -56,7 +58,7 @@ mixin feedItem(name,day,status,podcast,title,desc)
           span 11 dayes ago
         .feed-podcast-timer 
           include ../icons/_icon-timer
-          span 45mins 10 Sec
+          span 45 mins 10 Sec
       p.feed-podcast-desc= desc
   .feed-bottom 
     .feed-share 
@@ -68,33 +70,37 @@ mixin feedItem(name,day,status,podcast,title,desc)
       span Play Episode
 
 
-mixin followItem 
+mixin followItem(img,name,capsion,checked)
   .follow-content
     .follow-author 
       .follow-avatar 
-        img(src="https://plus.unsplash.com/premium_photo-1675826977325-a3b9f376038b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80", alt="Avatar")
+        img(srcSet=`${img} 2x`, alt="Avatar")
       .follow-info 
-        span.follow-name Yahia Amin
-        span.follow-capsion @yahiamdamin
-    button.button.button-primary.follow-button Follow
+        span.follow-name= name
+        span.follow-capsion= capsion
+    if checked 
+      button.button.button-primary.follow-button.followed Followed
+    else 
+      button.button.button-primary.follow-button Follow
 
-mixin historyItem()
+mixin historyItem(img,status,title,listen,like)
   .history-content 
     .history-image
-      img(src="https://images.unsplash.com/photo-1510784722466-f2aa9c52fff6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80", alt="History")
+      img(srcSet=`${img} 2x`, alt="History")
     .history-info 
-      span.history-status Perspective with Yahia Amin
-      span.history-title Don't Always Win | LifeSpring
+      span.history-status= status
+      span.history-title= title
       .history-following 
         .history-listen 
           include ../icons/_icon-play-small
-          span 156
+          span= listen
         .history-like 
           include ../icons/_icon-heart-small
-          span 76
+          span= like
 
-mixin topicItem 
-  .topic-box 
-    img(src="https://images.unsplash.com/photo-1510784722466-f2aa9c52fff6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80", alt="Topic").topic-img
-    span.topic-title 👫 Society &amp; Culture
-    span.topic-member 761k podcast
+mixin topicItem(img,title,member)
+  .topic-box
+    .topic-overlay 
+    img(srcSet=`${img} 2x`, alt="Topic").topic-img
+    span.topic-title= title
+    span.topic-member= member
