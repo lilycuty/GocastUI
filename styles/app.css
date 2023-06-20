@@ -234,6 +234,10 @@ body {
   position: relative;
 }
 
+.active {
+  transform: translateX(0);
+}
+
 .main-container {
   container-type: inline-size;
   container-name: containerMain;
@@ -293,8 +297,38 @@ body {
   .history-section {
     padding: 40px 60px 0 60px;
   }
-  .history-image {
-    flex: 1 1 109px;
+  .topic-section {
+    padding: 42px 60px 150px 60px;
+  }
+  .topic-box {
+    width: auto;
+  }
+  .button-close {
+    display: block;
+  }
+}
+@media screen and (max-width: 1074px) {
+  .button-union {
+    display: block !important;
+  }
+  .main-container-right {
+    display: block;
+  }
+  .podcast-section {
+    padding: 30px 60px 0 60px;
+  }
+  .podcast-image {
+    width: auto;
+    height: auto;
+  }
+  .follow-section {
+    padding: 40px 60px 0 60px;
+  }
+  .history-section {
+    padding: 40px 60px 0 60px;
+  }
+  .history-heading {
+    margin-left: 0;
   }
   .topic-section {
     padding: 42px 60px 150px 60px;
@@ -306,10 +340,6 @@ body {
     display: block;
   }
 }
-.active {
-  transform: translateX(0);
-}
-
 .topbar {
   display: flex;
   align-items: center;
